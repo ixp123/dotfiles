@@ -1,0 +1,55 @@
+#!/bin/sh
+
+# _                
+#(_) __  __  _ __  
+#| | \ \/ / | '_ \ 	- Visit my repos at: https://github.com/ixp123
+#| |  >  <  | |_) |	- Email me at: aimhreit06@protonmail.com
+#|_| /_/\_\ | .__/ 	- bspwmrc
+#           |_|
+
+#Autostarts
+sxhkd &
+picom -f &
+nitrogen --restore &
+./.config/bspwm/panel.sh &
+polybar beaubar
+
+#Monitor config
+bspc monitor HDMI-1 -d 1 2 3 4 5 6 7 8 9
+
+#BSPWM Config
+bspc config border_width	2
+bspc config window_gap		20
+bspc config top_padding		20
+bspc config bottom_padding	0
+bspc config left_padding	0
+bspc config right_padding	0
+bspc config sing_monacle	false
+bspc config click_to_focus	false
+bspc config split_ratio		0.50
+bspc config borderless_monacle	true
+bspc config gapless_monacle	true
+bspc config focus_by_distance	true
+bspc config focus_follows_pointer true
+bspc config history_aware_focus	true
+bspc config pointer_modifier mod1
+bspc config pointer_action1	move
+bspc config pointer_action2	resize_side
+bspc config pointer_action3	resize_corner
+bspc config remove_disabled monitors	true
+bspc config merge_overlapping_monitors	  true
+
+#BSPWM Colors
+bspc config normal_border_color		"#1e1e1e"
+bspc config active_border_color		"#ffffff"
+bspc config focused_border_color	"#272424"
+bspc config presel_feedback_color	"#5e81ac"
+bspc config urgent_border_color		"#10c20f"
+
+#Polybar hidden for youtube,mpv,etc.
+xdo below -t $(xdo id -n root) $(xdo id -a polybar-main_HDMI-1)
+
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a LibreWolf desktop='^2'
+bspc rule -a mpv state=floating
+bspc rule -a Screenkey manager=off

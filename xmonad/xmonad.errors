@@ -1,0 +1,22 @@
+
+xmonad.hs:232:1: warning: [-Wtabs]
+    Tab character found here, and in one further location.
+    Please use spaces instead.
+    |
+232 |         spawnOnce "nitrogen --restore &"
+    | ^^^^^^^^
+
+xmonad.hs:231:17: error:
+    Unexpected do block in function application:
+        do spawnOnce "nitrogen --restore &"
+           spawnOnce "picom &"
+    You could write it with parentheses
+    Or perhaps you meant to enable BlockArguments?
+    |
+231 | myStartupHook = do
+    |                 ^^...
+
+xmonad.hs:266:45: error: parse error on input ‘[’
+    |
+266 |         layoutHook         = myLayout, gaps [(U,25), (R,25), (L,25) (D,25)] $ Tall 1 (3/100) (1/2) ||| Full  -- leave gaps at the top and right
+    |                                             ^
