@@ -1,4 +1,4 @@
-<h1 align="center">Current 90% Suckless Setup (dwm, st, slock, dmenu, dwmblocks)</h1>
+<h1 align="center">My Suckless Setup (dwm, st, slock, dmenu, dwmblocks, dunst)</h1>
 
 <img src="/.github/screenshots/desktop.png" width="100%" />
 
