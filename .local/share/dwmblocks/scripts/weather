@@ -1,0 +1,5 @@
+#!/bin/sh
+weather=$(curl -s wttr.in/Ribchester?format=%t)
+icon="摒 "
+
+echo -e "^c#de935f^$icon^c#b2b2b2^$weather"

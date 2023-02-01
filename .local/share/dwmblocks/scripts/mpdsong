@@ -1,0 +1,5 @@
+#!/bin/sh
+icon=" "
+mpd=$(mpc --format "[%artist%] - [%title%]" | head -n 1)
+
+echo "$mpd"

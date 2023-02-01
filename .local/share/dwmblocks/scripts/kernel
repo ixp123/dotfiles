@@ -1,0 +1,5 @@
+#!/bin/sh
+kern="$(uname -r)"
+icon=" "
+
+echo -e "$icon$kern"

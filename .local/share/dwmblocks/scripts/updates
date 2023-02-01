@@ -1,0 +1,6 @@
+#!/bin/sh
+
+icon=" "
+updte=$(checkupdates | wc -l)
+
+echo "$icon$updte"
