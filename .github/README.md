@@ -8,6 +8,7 @@
 - dwm (window manager)
 - st (terminal)
 - dmenu (run launcher)
+- nsxiv (image viewer)
 - slock (screen lock)
 - dunst (notification daemon)
 - mpd (music daemon)
